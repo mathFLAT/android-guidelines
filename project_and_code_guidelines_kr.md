@@ -127,7 +127,7 @@ try {
 
 _우리는 파이널 라이저를 사용하지 않습니다. 파이널 라이저가 호출될지 아니면 전부 다 호출 될 수 있을지 보장 할 수 없습니다. 대부분의 경우 훌륭한 예외 처리 기능을 사용하여 파이널 라이저에서 필요한 것을 할 수 있습니다. 꼭 필요한 경우 close () 메소드 (또는 비슷한 것)를 정의하고 메소드가 호출되어야 할 때 정확하게 문서화하십시오. `InputStream`을 보면. 이 경우 로그를 넘치게 하지 않는 한 종료 자에서 짧은 로그 메시지를 인쇄하는 것이 적절하지만 반드시 필요하지는 않습니다._ - ([Android code style guidelines](https://source.android.com/source/code-style.html#dont-use-finalizers))
 
-(_We don't use finalizers. There are no guarantees as to when a finalizer will be called, or even that it will be called at all. In most cases, you can do what you need from a finalizer with good exception handling. If you absolutely need it, define a `close()` method (or the like) and document exactly when that method needs to be called. See `InputStream` for an example. In this case it is appropriate but not required to print a short log message from the finalizer, as long as it is not expected to flood the logs._ - ([Android code style guidelines](https://source.android.com/source/code-style.html#dont-use-finalizers)))
+(원문 : We don't use finalizers. There are no guarantees as to when a finalizer will be called, or even that it will be called at all. In most cases, you can do what you need from a finalizer with good exception handling. If you absolutely need it, define a `close()` method (or the like) and document exactly when that method needs to be called. See `InputStream` for an example. In this case it is appropriate but not required to print a short log message from the finalizer, as long as it is not expected to flood the logs. - ([Android code style guidelines](https://source.android.com/source/code-style.html#dont-use-finalizers)))
 
 ### 2.1.4 Fully qualify imports
 
@@ -633,13 +633,15 @@ Menu 예:
 테스트 클래스는 테스트 대상 클래스의 이름과 일치해야하며 그 뒤에`Test`가옵니다. 예를 들어,`DatabaseHelper`에 대한 테스트를 포함하는 테스트 클래스를 만들면, 이름을`DatabaseHelperTest`로 지정해야합니다.
 
 테스트 메소드에는`@Test` 주석이 달려 있으며 일반적으로 테스트 할 메소드의 이름으로 시작해야하며 그 다음에 전제 조건 및/또는 예상되는 동작이 따라옵니다.
-(Test methods are annotated with `@Test` and should generally start with the name of the method that is being tested, followed by a precondition and/or expected behaviour.)
+
+(원문 : Test methods are annotated with `@Test` and should generally start with the name of the method that is being tested, followed by a precondition and/or expected behaviour.)
 
 * Template: `@Test void methodNamePreconditionExpectedBehaviour()`
 * Example: `@Test void signInWithEmptyEmailFails()`
 
 시험이 없는 경우 사전 조건 및/또는 예상되는 동작이 항상 필요한 것은 아닙니다.
-(Precondition and/or expected behaviour may not always be required if the test is clear enough without them.)
+
+(원문 : Precondition and/or expected behaviour may not always be required if the test is clear enough without them.)
 
 
 때때로 클래스에는 많은 양의 메소드가 포함될 수 있으며, 동시에 각 메소드에 대해 여러 테스트가 필요합니다. 이 경우 테스트 클래스를 여러 클래스로 분할하는 것이 좋습니다. 예를 들어,`DataManager`에 많은 메소드가 포함되어 있다면, `DataManagerSignInTest`,`DataManagerLoadUsersTest` 등으로 나누고 싶을 것입니다. 일반적으로 공통된 [test fixtures](https://en.wikipedia.org/wiki/Test_fixture)를 가지고 있기 때문에 어떤 테스트가 속하는지 볼 수 있습니다.
