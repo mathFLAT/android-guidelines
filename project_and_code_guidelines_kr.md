@@ -15,7 +15,7 @@ Android 구성 요소를 확장하는 클래스의 경우 클래스 이름은 �
 
 ### 1.2.2 Resources 파일
 
-Resources 파일 이름은 __lowercase_underscore__로 작성합니다.
+Resources 파일 이름은 __lowercase_underscore__ 로 작성합니다.
 
 #### 1.2.2.1 Drawable 파일
 
@@ -82,7 +82,7 @@ selector states 이름 규칙:
 
 #### 1.2.2.4 Values 파일
 
-값 폴더의 리소스 파일은 __복수__여야합니다. (예 : `strings.xml`,`styles.xml`,`colors.xml`,`dimens.xml`,`attrs.xml`
+값 폴더의 리소스 파일은 __복수__ 여야합니다. (예 : `strings.xml`,`styles.xml`,`colors.xml`,`dimens.xml`,`attrs.xml`
 
 # 2 Code guidelines
 
@@ -172,7 +172,7 @@ public class MyClass {
 
 ### 2.2.4 들여 쓰기에 공백 사용
 
-블록에 __4 space__를 사용하십시오:
+블록에 __4 space__ 를 사용하십시오:
 
 ```java
 if (x == 1) {
@@ -226,9 +226,7 @@ if (condition)
 
 Android 코드 스타일 가이드에 따르면 Java에서 사전 정의 된 주석의 표준 사례는 다음과 같습니다:
 
-* `@Override`: The @Override annotation __must be used__ whenever a method overrides the declaration or implementation from a super-class. For example, if you use the @inheritdocs Javadoc tag, and derive from a class (not an interface), you must also annotate that the method @Overrides the parent class's method.
-
-@Override annotation은 메소드가 수퍼 클래스의 선언이나 구현을 오버라이드 __할 때마다__ 사용해야합니다. 예를 들어 @inheritdocs Javadoc 태그를 사용하고 클래스가 아니라 인터페이스에서 파생 된 경우, 당신은 또한 그 메소드가 부모 클래스의 메소드를`@Overrides`하는 것에 주석을 달아 주어야한다.
+* `@Override`: @Override annotation은 메소드가 수퍼 클래스의 선언이나 구현을 오버라이드 __할 때마다__ 사용해야합니다. 예를 들어 @inheritdocs Javadoc 태그를 사용하고 클래스가 아니라 인터페이스에서 파생 된 경우, 당신은 또한 그 메소드가 부모 클래스의 메소드를`@Overrides`하는 것에 주석을 달아 주어야한다.
 
 * `@SuppressWarnings`: @SuppressWarnings 주석은 경고를 제거 할 수없는 경우에만 사용해야합니다. 경고가 "제거 불가능"테스트를 통과하면 모든 경고가 코드의 실제 문제를 반영하도록 @SuppressWarnings 주석을 사용해야합니다.
 
@@ -238,7 +236,7 @@ Android 코드 스타일 가이드에 따르면 Java에서 사전 정의 된 주
 
 __Classes, Methods and Constructors__
 
-주석은 class, method 또는 constructor에 적용될 때 문서 블록 다음에 나열되며 __한 줄에 하나의 주석으로 표시__되어야합니다.
+주석은 class, method 또는 constructor에 적용될 때 문서 블록 다음에 나열되며 __한 줄에 하나의 주석으로 표시__ 되어야합니다.
 
 ```java
 /* This is the documentation block about the class */
@@ -249,7 +247,7 @@ public class MyAnnotatedClass { }
 
 __Fields__
 
-fields에 적용되는 Annotations는 줄이 최대 줄 길이(100)에 도달하지 않는 한 __같은 줄__에 나열되어야합니다.
+fields에 적용되는 Annotations는 줄이 최대 줄 길이(100)에 도달하지 않는 한 __같은 줄__ 에 나열되어야합니다.
 
 ```java
 @Nullable @Mock DataManager mDataManager;
@@ -311,7 +309,7 @@ if (BuildConfig.DEBUG) Log.d(TAG, "The value of x is " + x);
 
 ### 2.2.10 Class member 순서
 
-이에 대한 정확한 해결책은 하나도 없지만 __논리적__이고 __일관된 순서__를 사용하면 코드 학습 가능성과 가독성이 향상됩니다. 다음 순서를 따르는 것이 좋습니다:
+이에 대한 정확한 해결책은 하나도 없지만 __논리적__ 이고 __일관된 순서__ 를 사용하면 코드 학습 가능성과 가독성이 향상됩니다. 다음 순서를 따르는 것이 좋습니다:
 
 1. Constants
 2. Fields
@@ -351,11 +349,7 @@ public class MainActivity extends Activity {
 }
 ```
 
-If your class is extending an __Android component__ such as an Activity or a Fragment, it is a good practice to order the override methods so that they __match the component's lifecycle__. For example, if you have an Activity that implements `onCreate()`, `onDestroy()`, `onPause()` and `onResume()`, then the correct order is:
-
-If your class is extending an Android component such as an Activity or a Fragment, it is a good practice to order the override methods so that they match the component's lifecycle. For example, if you have an Activity that implements `onCreate()`, `onDestroy()`, `onPause()` and `onResume()`, then the correct order is:
-
-클래스가 Activity 또는 Fragment와 같은 __Android 구성 요소__를 extend하는 경우 override 메소드가 구성 요소의 __생명주기와 일치__하도록 정렬하는 것이 좋습니다. 예를 들어, `onCreate()`, `onDestroy()`, `onPause()` 및 `onResume()`을 구현 한 Activity가있는 경우 올바른 순서는 다음과 같습니다:
+클래스가 Activity 또는 Fragment와 같은 __Android 구성 요소__ 를 extend하는 경우 override 메소드가 구성 요소의 __생명주기와 일치__ 하도록 정렬하는 것이 좋습니다. 예를 들어, `onCreate()`, `onDestroy()`, `onPause()` 및 `onResume()`을 구현 한 Activity가있는 경우 올바른 순서는 다음과 같습니다:
 
 ```java
 public class MainActivity extends Activity {
@@ -380,7 +374,7 @@ public class MainActivity extends Activity {
 
 안드로이드를 프로그래밍 할 때는`Context`를 취하는 메소드를 정의하는 것이 일반적입니다. 이와 같은 메소드를 작성하는 경우 __Context__가 __첫 번째__ 매개 변수 여야합니다.
 
-반대의 경우로 항상 __마지막__에 와야하는 매개 변수는 __callback__ 인터페이스입니다.
+반대의 경우로 항상 __마지막__ 에 와야하는 매개 변수는 __callback__ 인터페이스입니다.
 
 Examples:
 
@@ -395,8 +389,6 @@ public void loadUserAsync(Context context, int userId, UserCallback callback);
 ### 2.2.13 String 상수, 이름 지정 및 값
 
 `SharedPreferences`,`Bundle`,`Intent`와 같은 안드로이드 SDK의 많은 요소들은 키 - 값 쌍 접근 방식을 사용하기 때문에 작은 응용 프로그램이라 할지라도 많은 문자열 상수를 작성해야 할 가능성이 높습니다.
-
-When using one of these components, you __must__ define the keys as a `static final` fields and they should be prefixed as indicated below.
 
 이 컴포넌트들 중 하나를 사용할 때, 키를 __반드시__ `static final` 필드로 정의해야하며, 다음과 같이 접두어를 붙여야합니다.
 
@@ -455,14 +447,14 @@ __Note 1__: 이 메소드들은`onCreate()`전에 클래스 최상단에 위치�
 
 __Note 2__: 위에서 설명한 메소드를 제공하면 extras 및 arguments의 키는 클래스 외부에 노출 될 필요가 없기 때문에 `private`이어야합니다.
 
-### 2.2.15 Line length limit
+### 2.2.15 줄 길이 제한
 
-코드 행은 __100자__를 넘지 않아야합니다. 행이이 제한보다 길면 길이를 줄이기 위해 일반적으로 두 가지 옵션이 있습니다.
+코드 행은 __100자__ 를 넘지 않아야합니다. 행이이 제한보다 길면 길이를 줄이기 위해 일반적으로 두 가지 옵션이 있습니다.
 
 * 지역 변수 또는 메소드를 추출합니다 (권장).
 * 줄 바꿈을 적용하여 한 줄을 여러 줄로 나눕니다.
 
-100보다 긴 행을 가질 수있는 두 가지 __예외__가 있습니다:
+100보다 긴 행을 가질 수있는 두 가지 __예외__ 가 있습니다:
 
 * 분할 할 수없는 행 (예 : 댓글의 긴 URL)
 * `package`와 `import` 문.
@@ -482,7 +474,7 @@ int longName = anotherVeryLongVariable + anEvenLongerOne - thisRidiculousLongOne
 
 __대입 연산자 예외__
 
-`break at operators` 규칙의 예외는 대입 연산자`=`입니다. 여기서 줄 바꿈은 연산자 __다음__에 일어나야합니다.
+`break at operators` 규칙의 예외는 대입 연산자`=`입니다. 여기서 줄 바꿈은 연산자 __다음__ 에 일어나야합니다.
 
 
 ```java
@@ -575,7 +567,7 @@ This is __bad__ :
 
 ### 2.3.2 리소스 네이밍
 
-리소스 ID와 이름은 __lowercase_underscore__로 작성됩니다
+리소스 ID와 이름은 __lowercase_underscore__ 로 작성됩니다
 
 #### 2.3.2.1 ID 네이밍
 
@@ -622,7 +614,7 @@ Menu 예:
 
 #### 2.3.2.3 Styles and Themes
 
-다른 리소스와 달리 스타일 이름은 __UpperCamelCase__로 작성됩니다.
+다른 리소스와 달리 스타일 이름은 __UpperCamelCase__ 로 작성됩니다.
 
 ### 2.3.3 Attributes 순서
 
