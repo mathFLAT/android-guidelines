@@ -645,15 +645,15 @@ Menu 예:
 * Template: `@Test void methodNamePreconditionExpectedBehaviour()`
 * Example: `@Test void signInWithEmptyEmailFails()`
 
-시험이없는 경우 사전 조건 및/또는 예상되는 동작이 항상 필요한 것은 아닙니다.
+시험이 없는 경우 사전 조건 및/또는 예상되는 동작이 항상 필요한 것은 아닙니다.
 (Precondition and/or expected behaviour may not always be required if the test is clear enough without them.)
 
 
-때때로 클래스에는 많은 양의 메소드가 포함될 수 있으며, 동시에 각 메소드에 대해 여러 테스트가 필요합니다. 이 경우 테스트 클래스를 여러 클래스로 분할하는 것이 좋습니다. 예를 들어,`DataManager`에 많은 메소드가 포함되어 있다면, DataManagerSignInTest`,`DataManagerLoadUsersTest` 등으로 나누고 싶을 것입니다. 일반적으로 공통된 [test fixtures](https://en.wikipedia.org/wiki/Test_fixture)를 가지고 있기 때문에 어떤 테스트가 속하는지 볼 수 있습니다.
+때때로 클래스에는 많은 양의 메소드가 포함될 수 있으며, 동시에 각 메소드에 대해 여러 테스트가 필요합니다. 이 경우 테스트 클래스를 여러 클래스로 분할하는 것이 좋습니다. 예를 들어,`DataManager`에 많은 메소드가 포함되어 있다면, `DataManagerSignInTest`,`DataManagerLoadUsersTest` 등으로 나누고 싶을 것입니다. 일반적으로 공통된 [test fixtures](https://en.wikipedia.org/wiki/Test_fixture)를 가지고 있기 때문에 어떤 테스트가 속하는지 볼 수 있습니다.
 
 ### 2.4.2 Espresso 테스트
 
-모든 에스프레소 테스트 클래스는 일반적으로 액티비티를 대상으로하므로, 이름은 타겟 액티비티의 이름과 `Test`가 뒤따라야합니다. `SignInActivityTest`
+모든 에스프레소 테스트 클래스는 일반적으로 액티비티를 대상으로하므로, 이름은 타겟 액티비티의 이름과 `Test`가 뒤따라야합니다. 예 : `SignInActivityTest`
 
 Espresso API를 사용하는 경우 새 행에 연결된 메소드를 배치하는 것이 일반적입니다.
 
