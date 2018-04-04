@@ -120,6 +120,7 @@ try {
 ```
 
 [자세한 내용](https://source.android.com/source/code-style.html#dont-catch-generic-exception)
+
 간단 요약 : 예상하지 못한 런타임 오류도 모두 잡아서 처리한다.
 
 ### 2.1.3 finalizers를 사용하지 말 것
