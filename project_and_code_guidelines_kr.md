@@ -263,7 +263,7 @@ _지역 변수는 처음 사용한 시점에서 선언해야합니다. 거의 �
 
 ### 2.2.8 import statements 순서
 
-Android Studio와 같은 IDE를 사용하는 경우 IDE가 이미 이러한 규칙을 따르고 있으므로 걱정할 필요가 없습니다. 그렇지 않다면 아래를보십시오.
+Android Studio와 같은 IDE를 사용하는 경우 IDE가 이미 이러한 규칙을 따르고 있으므로 걱정할 필요가 없습니다. 그렇지 않다면 아래를 보십시오.
 
 import statements의 순서 :
 
